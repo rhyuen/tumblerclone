@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>My Boilerplate</title>
+        <style>                    
+            body{                
+                margin: 0;       
+                display: flex;
+                justify-content: center;          
+                font-family: "Segoe UI";                
+            }
+            #app{                
+                height: 100vh;                
+            }
+            .root{
+                width: 100%;
+                display: flex;                
+                flex-direction: column;
+                align-items: center;
+                box-sizing: border-box;
+            }
+                                 
+
+            @media screen and (max-width: 320px){
+                #app{
+                    max-width: 320px;
+                    width: 100%;                    
+                }              
+            }
+            @media screen and (max-width: 768px){
+                #app{
+                    max-width: 768px;
+                    width: 100%;                   
+                }               
+            }
+            @media screen and (max-width: 1024px){
+                #app{
+                    max-width: 1024px;
+                    width: 100%;                    
+                }               
+            }
+            @media screen and (min-width: 1024px){
+                #app{
+                    width: 100%;                                                          
+                }                
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "app"></div>
+    </body>    
+</html>

@@ -1,0 +1,49 @@
+{
+    "data": [
+        {
+            "name": "Batman",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Wonder Woman",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Superman",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Green Lantern",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Cyborg",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Flash",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Green Arrow",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Black Siren",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        },
+        {
+            "name": "Aquaman",
+            "occupation": "Superhero",
+            "description": "brooding batman is brooding."
+        }        
+    ]
+}
