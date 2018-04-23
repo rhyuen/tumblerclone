@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Timeline = styled.div`    
     width: 70%;
-    background: orange;    
+    background: white;    
 `;
 const TimelineItem = styled.div`    
     width: 90%;
@@ -12,13 +12,12 @@ const TimelineItem = styled.div`
 
 `;
 const AvatarSection = styled.div`    
-    background: grey;
+    background: #343434;    
     width: 5vh;
     height: 5vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 0.5vh;
+    align-items: center;    
     margin-right: 2vh;
     
 `;
@@ -27,6 +26,7 @@ const Avatar = styled.div`
     justify-content: center;
     align-items: center;
     color: white;
+    text-transform: uppercase;
 `;
 
 const ItemSection = styled.div`
@@ -37,6 +37,8 @@ const ItemSection = styled.div`
     font-size: 14px;
     font-family: Helvetica;
     font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.1);
 `;
 const Header = styled.div`  
     margin: 2vh;
@@ -45,6 +47,12 @@ const Header = styled.div`
     font-weight: bold;
 `;
 const Content = styled.div`
+    background: lavender;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    box-sizing: border-box;
 `;
 const Footer = styled.div`
     margin: 2vh;
@@ -58,12 +66,12 @@ export default ({content}) => {
         return (
             <TimelineItem>
                 <AvatarSection>
-                    <Avatar>{item.name[0]}</Avatar>
+                    <Avatar>{item.author[0]}</Avatar>
                 </AvatarSection>                
                 <ItemSection>
-                    <Header>{item.name}</Header>
-                    <Content>{item.description}</Content>
-                    <Footer>{item.occupation}</Footer>
+                    <Header>{item.author}</Header>
+                    <Content>{item.title}</Content>
+                    <Footer>{item.score} | {item.url} | {item.date}</Footer>
                     <Actions>Actions</Actions>
                 </ItemSection>
             </TimelineItem>

@@ -1,49 +1,57 @@
 {
-    "data": [
-        {
+    "data": [{
             "name": "Batman",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Detective",
+            "description": "brooding batman is brooding.",
+            "tags": ["bat", "bruce", "wayne", "rich", "hasissues", "bat-fam"]
         },
         {
             "name": "Wonder Woman",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Champion",
+            "description": "brooding batman is brooding. Some random text needs to go here so I can see what it lookslike.",
+            "tags": ["wonder", "woman", "invisible", "jet", "lasso", "sword", "shield"]
         },
         {
             "name": "Superman",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Figurehead",
+            "description": "Fail Sanely or you know.  don't.Sanitize and validate configuration inputs, and respond to implausible inputs by both continuing to operate in the previous state and alerting to the receipt of bad input. Bad input often falls into one of these categories:",
+            "tags": ["sodull", "theworsthero", "cape", "red", "blue", "sstandsforhope"]
         },
         {
             "name": "Green Lantern",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Beat Cop",
+            "description": "brooding batman is brooding.",
+            "tags": ["weaktoyellow", "feelings", "green", "copsinspace"]
         },
         {
             "name": "Cyborg",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Robot",
+            "description": "brooding batman is brooding.",
+            "tags": ["robots", "redeye"]
         },
         {
             "name": "Flash",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Fastest Man Alive",
+            "description": "brooding batman is brooding.",
+            "tags": ["fastestManAlive"]
         },
         {
             "name": "Green Arrow",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "occupation": "Assassin",
+            "description": "brooding batman is brooding.",
+            "tags": ["fastestManAlive", "theHawkEyeoftheJusticeLeague"]
         },
         {
             "name": "Black Siren",
             "occupation": "Superhero",
-            "description": "brooding batman is brooding."
+            "description": "brooding batman is brooding.",
+            "tags": ["fastestManAlive"]
         },
         {
             "name": "Aquaman",
-            "occupation": "Superhero",
-            "description": "brooding batman is brooding."
-        }        
+            "occupation": "Swimmer",
+            "description": "brooding batman is brooding.",
+            "tags": ["orange", "green", "theaquamanofsuperheroes"]
+        }
     ]
 }

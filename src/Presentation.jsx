@@ -4,7 +4,7 @@ import Timeline from "./Timeline.jsx";
 import SidePanel from "./SidePanel.jsx";
 
 const Presentation = styled.div`    
-    margin-top: 2vh;
+    margin-top: 6vh;
     display: flex;    
     width: 1024px;
     background: pink;
