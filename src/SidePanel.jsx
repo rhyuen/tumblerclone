@@ -6,14 +6,14 @@ const RootContainer = styled.div`
     display: flex;
     flex-direction: column;
     background-color: white;    
-    width: 30%;
+    width: 30%;    
     font-family: Helvetica;
-    font-size: 14px;
+    font-size: 14px;    
 `;
 
 const Section = styled.div`    
     margin: 0 auto;
-    width: 95%;    
+    width: 100%;    
 `;
 const SectionTitle = styled.div`
     border-bottom: 1px solid rgba(0,0,0,0.4);
@@ -23,14 +23,28 @@ const SectionTitle = styled.div`
 `;
 const SectionContent = styled.div`
 `;
+const ItemSubscribe = styled.div`
+    background: lavender;    
+    width: 2vw;
+    height: 2vw;        
+`;
+
 const Item = styled.div`
     display: flex;
     padding: 0.5vw 0vw;  
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+    justify-content: space-between;
+    
     &:hover{
         background: rgba(0,0,0,0.1);
     }
+
+    &:hover ${ItemSubscribe}{
+        background: purple;
+    }
+`;
+const ItemDetails = styled.div`
+    display: flex;    
 `;
 const ItemIcon = styled.div`
     height: 2vw;
@@ -50,11 +64,6 @@ const TextTitle = styled.div`
 const TextSubtitle = styled.div`
     font-size: 13px;
 `;
-const ItemSubscribe = styled.div`
-    background: lavender;
-    width: 2vw;
-    height: 2vw;
-`;
 
 export default ({}) => {
     return (
@@ -66,11 +75,13 @@ export default ({}) => {
                         data.data.map(item => {
                             return (
                                 <Item>
-                                    <ItemIcon>{item.name[0]}</ItemIcon>
-                                    <ItemTextContainer>
-                                        <TextTitle>{item.name}</TextTitle>
-                                        <TextSubtitle>{item.occupation}</TextSubtitle>
-                                    </ItemTextContainer>
+                                    <ItemDetails>
+                                        <ItemIcon>{item.name[0]}</ItemIcon>
+                                        <ItemTextContainer>
+                                            <TextTitle>{item.name}</TextTitle>
+                                            <TextSubtitle>{item.occupation}</TextSubtitle>
+                                        </ItemTextContainer>
+                                    </ItemDetails>
                                     <ItemSubscribe/>
                                 </Item>
                             );
@@ -78,7 +89,7 @@ export default ({}) => {
                     }
                 </SectionContent>
             </Section>
-            <Section><SectionTitle>Two</SectionTitle></Section>            
+            <Section><SectionTitle>Two</SectionTitle></Section>                  
         </RootContainer>
     );
 }

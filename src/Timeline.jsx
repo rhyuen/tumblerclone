@@ -3,21 +3,24 @@ import styled from "styled-components";
 
 const Timeline = styled.div`    
     width: 70%;
+    display: flex;
+    flex-direction: column;
     background: white;    
+    box-sizing: border-box;
 `;
 const TimelineItem = styled.div`    
     width: 90%;
     margin: 0 auto;
-    display: flex;
-
+    display: flex;    
 `;
 const AvatarSection = styled.div`    
+    width: 10%;
     background: #343434;    
     width: 5vh;
     height: 5vh;
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;        
     margin-right: 2vh;
     
 `;
@@ -71,7 +74,7 @@ export default ({content}) => {
                 <ItemSection>
                     <Header>{item.author}</Header>
                     <Content>{item.title}</Content>
-                    <Footer>{item.score} | {item.url} | {item.date}</Footer>
+                    <Footer>{item.score} | {item.date}</Footer>
                     <Actions>Actions</Actions>
                 </ItemSection>
             </TimelineItem>
