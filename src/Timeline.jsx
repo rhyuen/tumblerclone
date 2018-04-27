@@ -68,7 +68,7 @@ export default ({content}) => {
     const blah = content.map((item) => {        
         return (
             <TimelineItem>
-                <AvatarSection>
+                <AvatarSection>                    
                     <Avatar>{item.author[0]}</Avatar>
                 </AvatarSection>                
                 <ItemSection>
