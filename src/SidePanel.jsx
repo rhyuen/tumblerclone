@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import data from "./data.json";
+import Icon from "./Icon.jsx";
 
 const RootContainer = styled.div`
     display: flex;
@@ -46,15 +47,7 @@ const Item = styled.div`
 const ItemDetails = styled.div`
     display: flex;    
 `;
-const ItemIcon = styled.div`
-    height: 2vw;
-    width: 2vw;
-    background: #343434;    
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;        
-`;
+
 const ItemTextContainer = styled.div`
     padding-left: 5px;        
 `;
@@ -64,6 +57,8 @@ const TextTitle = styled.div`
 const TextSubtitle = styled.div`
     font-size: 13px;
 `;
+
+import {TimelineItem, ItemSection} from "./Timeline.jsx";
 
 export default ({}) => {
     return (
@@ -76,7 +71,7 @@ export default ({}) => {
                             return (
                                 <Item>
                                     <ItemDetails>
-                                        <ItemIcon>{item.name[0]}</ItemIcon>
+                                        <Icon>{item.name[0]}</Icon>
                                         <ItemTextContainer>
                                             <TextTitle>{item.name}</TextTitle>
                                             <TextSubtitle>{item.occupation}</TextSubtitle>
@@ -89,7 +84,14 @@ export default ({}) => {
                     }
                 </SectionContent>
             </Section>
-            <Section><SectionTitle>Two</SectionTitle></Section>                  
+            <Section>
+                <SectionTitle>Two</SectionTitle>
+                <SectionContent>
+                    <TimelineItem>
+                        <ItemSection>asdf</ItemSection>
+                    </TimelineItem>
+                </SectionContent>
+            </Section>                  
         </RootContainer>
     );
 }

@@ -4,7 +4,8 @@ import styled from "styled-components";
 
 const Search = styled.div`
     display: flex;    
-    position: relative;
+    position: relative;    
+    z-index:10;
 `;
 
 const SearchDropdownContainer = styled.div`
@@ -13,8 +14,7 @@ const SearchDropdownContainer = styled.div`
     top: 5.5vh;
     background: white;
     width: 50vh;
-    height: 25vh;
-    z-index: 10;
+    height: 25vh;    
     border: 1px solid rgba(0,0,0,0.1);    
 
     &:hover {
@@ -26,15 +26,16 @@ const SearchItems = styled.div`
     height: 5vh;
     display: flex;
     flex-direction: column;   
-    justify-content: center;
-    background: white;        
+    justify-content: center;    
+
 
     &:hover{
-        background: grey;
+        background: lavender;
     }
 `;
 
 const SearchItemContainer = styled.div`
+    background: white;
     display: flex;        
 `;
 const SearchAvatarContainer = styled.div`        
@@ -52,10 +53,11 @@ const SearchAvatarContent = styled.div`
 const SearchTitleContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 1vh;
+    margin-left: 1vh;    
 `;
 const SearchTitleContent = styled.a`  
     text-decoration: none;
+    background: white;
 `;
 
 const SearchInput = styled.input`     
@@ -63,7 +65,7 @@ const SearchInput = styled.input`
     box-sizing: border-box;
     font-size: 20px;
     padding-left: 2vh;
-    border: 2px solid transparent;
+    border: 2px solid transparent;    
     
     &:focus ~ ${SearchDropdownContainer} {
         display: block;

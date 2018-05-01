@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Timeline from "./Timeline.jsx";
 import SidePanel from "./SidePanel.jsx";
-import Footer from "./Footer.jsx";
 
 const Presentation = styled.div`    
     margin-top: 6vh;

@@ -8,21 +8,41 @@ const Timeline = styled.div`
     background: white;    
     box-sizing: border-box;
 `;
-const TimelineItem = styled.div`    
+export const TimelineItem = styled.div`    
     width: 90%;
     margin: 0 auto;
     display: flex;    
 `;
-const AvatarSection = styled.div`    
-    width: 10%;
+
+const AvatarHover = styled.div`
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 20vh;
+    height: 30vh;
+    background: rgba(0,0,0,0.1);    
+    border: 1px solid rgba(0,0,0,0.1);
+    bottom: -30vh;            
+
+    &:hover {
+        display: block;
+    }    
+`;
+
+const AvatarSection = styled.div`        
+    position: relative;
+    box-sizing: border-box;        
     background: #343434;    
     width: 5vh;
     height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;        
-    margin-right: 2vh;
+    margin-right: 2vh;        
     
+    &:hover ${AvatarHover} {
+        display: block;
+    }
 `;
 const Avatar = styled.div`
     display: flex;
@@ -32,7 +52,7 @@ const Avatar = styled.div`
     text-transform: uppercase;
 `;
 
-const ItemSection = styled.div`
+export const ItemSection = styled.div`
     margin-bottom: 2vh;
     background: white;
     width: 100%;
@@ -48,6 +68,7 @@ const Header = styled.div`
     font-size: 14px;
     font-family: Helvetica;
     font-weight: bold;
+    background: lavender;
 `;
 const Content = styled.div`
     background: lavender;
@@ -64,15 +85,25 @@ const Actions = styled.div`
     margin: 2vh;
 `;
 
+const CloseBtn = styled.input`
+    type: button;
+    background: ${props => props.color};    
+    border: none;
+    height: 100%;    
+    text: ${props => props.text}
+`;
+
+
 export default ({content}) => {    
-    const blah = content.map((item) => {        
+    const listOfItems = content.map((item) => {        
         return (
             <TimelineItem>
                 <AvatarSection>                    
                     <Avatar>{item.author[0]}</Avatar>
+                    <AvatarHover/>
                 </AvatarSection>                
                 <ItemSection>
-                    <Header>{item.author}</Header>
+                    <Header>{item.author} <CloseBtn color = "blue" text="shadow"/></Header>
                     <Content>{item.title}</Content>
                     <Footer>{item.score} | {item.date}</Footer>
                     <Actions>Actions</Actions>
@@ -80,5 +111,5 @@ export default ({content}) => {
             </TimelineItem>
         );
     });
-    return <Timeline>{blah}</Timeline>;
+    return <Timeline>{listOfItems}</Timeline>;
 }

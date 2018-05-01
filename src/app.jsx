@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import Nav from "./Nav.jsx";
 import Presentation from "./Presentation.jsx";
-// import data from "./data.json";
+import styled from "styled-components";
 import reddit from "./reddit.json";
+import uuid from "uuid";
 
 class App extends Component{
     state = {
@@ -48,13 +49,13 @@ class App extends Component{
         });
     }    
 
-    render(){
-        return (
-            <div className = "root">           
-                <Nav/>        
-                <Presentation content = {this.state.data}/>                                
-            </div>
-        )
+    render(){       
+        return <Presentation content = {this.state.data}/>;
+  
+        //     <div className = "root">           
+        //         <Nav/>        
+        //         <Presentation content = {this.state.data}/>                                
+        //     </div>        
     }
 }
 
