@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export default ({color = "white", children}) => {
+export default ({background = "#343434", color = "white", size = "2vw", children}) => {
     const Icon = styled.div`
-        height: 2vw;
-        width: 2vw;
-        background: #343434;    
+        height: ${size};
+        width: ${size};
+        background: ${background};    
         color: ${color};
         display: flex;
         justify-content: center;

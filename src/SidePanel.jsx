@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import data from "./data.json";
 import Icon from "./Icon.jsx";
+import ContentItem from "./ContentItem.jsx";
 
 const RootContainer = styled.div`
     display: flex;
@@ -15,11 +16,13 @@ const RootContainer = styled.div`
 const Section = styled.div`    
     margin: 0 auto;
     width: 100%;    
+    margin-bottom: 2vw;
 `;
 const SectionTitle = styled.div`
     border-bottom: 1px solid rgba(0,0,0,0.4);
     font-weight: bold;
     padding-bottom: 1vh;
+    margin-bottom: 1vh;
     text-transform: uppercase;
 `;
 const SectionContent = styled.div`
@@ -58,8 +61,6 @@ const TextSubtitle = styled.div`
     font-size: 13px;
 `;
 
-import {TimelineItem, ItemSection} from "./Timeline.jsx";
-
 export default ({}) => {
     return (
         <RootContainer>
@@ -85,11 +86,9 @@ export default ({}) => {
                 </SectionContent>
             </Section>
             <Section>
-                <SectionTitle>Two</SectionTitle>
+                <SectionTitle>Advertisements</SectionTitle>
                 <SectionContent>
-                    <TimelineItem>
-                        <ItemSection>asdf</ItemSection>
-                    </TimelineItem>
+                    <ContentItem title = "Ad TITLE that does stuff and stuff."/>
                 </SectionContent>
             </Section>                  
         </RootContainer>

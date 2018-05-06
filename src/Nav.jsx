@@ -14,6 +14,7 @@ const Nav = styled.div`
     padding: 0 10vw 0 10vw;    
     width: 100%;
     border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 10;
 `;
 const NavComponent = styled.div`    
     display: flex;
@@ -51,18 +52,23 @@ const UserDetails = styled.div`
     font-size: 13px;
 `;
 
+const StyledLink = styled(Link)`
+    color: black;
+    text-decoration: none;
+`;
+
 export default ({}) => {
     return (
         <Nav>
             <NavComponent>
-                <NavItem><Link to = "/">A</Link></NavItem>                
+                <NavItem><StyledLink to = "/">A</StyledLink></NavItem>                
                 <NavForm>
                     <Search/>                                            
                 </NavForm>
             </NavComponent>
             <NavComponent>
-                <NavItem><Link to = "/explore">R</Link></NavItem>
-                <NavItem><Link to = "/personal">O</Link></NavItem>                             
+                <NavItem><StyledLink to = "/explore">R</StyledLink></NavItem>
+                <NavItem><StyledLink to = "/personal">O</StyledLink></NavItem>                             
                 <NavUserItem>
                     <Icon>R</Icon>
                     <UserDetails>User Details<br/>{new Date().toLocaleString()}</UserDetails>
