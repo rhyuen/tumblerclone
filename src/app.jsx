@@ -36,26 +36,31 @@ class App extends Component{
         //     });             
         const less_data = reddit.data.children.map(item => {
             return {
+                id : uuid.v4(),
                 author: item.data.author,
                 score: item.data.score,
                 title: item.data.title,
                 url: item.data.url,
-                date: item.data.created_utc
+                date: item.data.created_utc,
+                category: item.data.subreddit
             };
         });
 
         this.setState({
             data: less_data
         });
-    }    
+    }
+
+    upvote = () => {
+        this.setState(prevState => {
+            return {
+                ...prevState
+            };
+        });
+    }
 
     render(){       
-        return <Presentation content = {this.state.data}/>;
-  
-        //     <div className = "root">           
-        //         <Nav/>        
-        //         <Presentation content = {this.state.data}/>                                
-        //     </div>        
+        return <Presentation content = {this.state.data}/>;     
     }
 }
 

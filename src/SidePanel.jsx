@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import uuid from "uuid";
 import data from "./data.json";
 import Icon from "./Icon.jsx";
-import ContentItem from "./ContentItem.jsx";
+import {AdSection} from "./ContentItem.jsx";
 
 const RootContainer = styled.div`
     display: flex;
@@ -44,7 +45,7 @@ const Item = styled.div`
     }
 
     &:hover ${ItemSubscribe}{
-        background: purple;
+        background: #4842b7;
     }
 `;
 const ItemDetails = styled.div`
@@ -64,13 +65,13 @@ const TextSubtitle = styled.div`
 export default ({}) => {
     return (
         <RootContainer>
-            <Section>
+            <Section key = {uuid.v4()}>
                 <SectionTitle>Duper Heroes</SectionTitle>
                 <SectionContent>
                     {
                         data.data.map(item => {
                             return (
-                                <Item>
+                                <Item key = {uuid.v4()}>
                                     <ItemDetails>
                                         <Icon>{item.name[0]}</Icon>
                                         <ItemTextContainer>
@@ -85,10 +86,10 @@ export default ({}) => {
                     }
                 </SectionContent>
             </Section>
-            <Section>
+            <Section key = {uuid.v4()}>
                 <SectionTitle>Advertisements</SectionTitle>
                 <SectionContent>
-                    <ContentItem title = "Ad TITLE that does stuff and stuff."/>
+                    <AdSection title = "Ad TITLE that does stuff and stuff."/>
                 </SectionContent>
             </Section>                  
         </RootContainer>

@@ -28,7 +28,6 @@ const SearchItems = styled.div`
     flex-direction: column;   
     justify-content: center;    
 
-
     &:hover{
         background: lavender;
     }

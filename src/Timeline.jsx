@@ -56,7 +56,7 @@ const Avatar = styled.div`
 export default ({content}) => {    
     const listOfItems = content.map((item) => {        
         return (
-            <TimelineItem>
+            <TimelineItem key = {item.id}>
                 <AvatarSection>                    
                     <Avatar>{item.author[0]}</Avatar>
                     <AvatarHover/>

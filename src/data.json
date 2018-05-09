@@ -53,5 +53,12 @@
             "description": "brooding batman is brooding.",
             "tags": ["orange", "green", "theaquamanofsuperheroes"]
         }
+    ],
+    "replacements": [
+        {
+            "name": "Spider-Man",
+            "occupation": "Punk",
+            "description": "Does whatever a spider can."            
+        }
     ]
 }
