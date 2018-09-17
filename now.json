@@ -1,0 +1,8 @@
+{
+    "name": "rytumblr",
+    "alias": [
+        "ry-tumblr"
+    ],
+    "type": "static",   
+    "public": true
+}
