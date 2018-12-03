@@ -3,10 +3,24 @@ import styled from "styled-components";
 import ContentItem from "./ContentItem.jsx";
 
 const Timeline = styled.div`    
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background: white;        
+    background: white;     
+    
+  @media(min-width: 450px){
+        width: 100%;
+        min-width: 450px;
+    }
+    
+    @media(min-width: 700px){
+        width: 100%;
+        min-width: 700px;
+    }
+
+    @media(min-width: 1200px){
+        width: 70%;
+    }   
 `;
 export const TimelineItem = styled.div`    
     width: 90%;
@@ -41,9 +55,11 @@ const AvatarSection = styled.div`
     margin-right: 2vh;        
     
     &:hover ${AvatarHover} {
-        display: block;
+        display: none;
     }
 `;
+// enable hover above with display: block;
+
 const Avatar = styled.div`
     display: flex;
     justify-content: center;

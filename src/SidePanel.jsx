@@ -6,12 +6,16 @@ import Icon from "./Icon.jsx";
 import {AdSection} from "./ContentItem.jsx";
 
 const RootContainer = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: white;    
     width: 30%;    
     font-family: Helvetica;
     font-size: 14px;    
+
+    @media(min-width: 1200px){
+        display: flex;
+    }
 `;
 
 const Section = styled.div`    

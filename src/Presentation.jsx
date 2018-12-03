@@ -3,13 +3,26 @@ import styled from "styled-components";
 import Timeline from "./Timeline.jsx";
 import SidePanel from "./SidePanel.jsx";
 
-const Presentation = styled.div`    
+const Presentation = styled.div`        
+    display: flex;  
+    background: white;        
+    margin: 0 auto;
     margin-top: 6vh;
-    display: flex;    
-    width: 1024px;
-    background: white;
-    min-height: 100vh;    
-    box-sizing: border-box;    
+    
+
+    @media(min-width: 450px){
+        width: 100%;
+        min-width: 450px;
+    }
+    
+    @media(min-width: 700px){
+        width: 100%;
+        min-width: 700px;
+    }
+
+    @media (min-width: 1200px){              
+        width: 1024px;        
+    }
 `;
 
 

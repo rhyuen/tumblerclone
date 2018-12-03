@@ -26,11 +26,7 @@ const SearchItems = styled.div`
     height: 5vh;
     display: flex;
     flex-direction: column;   
-    justify-content: center;    
-
-    &:hover{
-        background: lavender;
-    }
+    justify-content: center;        
 `;
 
 const SearchItemContainer = styled.div`
@@ -81,7 +77,7 @@ const dummy = ["Namtab", "Batman", "Robin", "Nightwing", "Signal"];
 export default () => {
     return (
         <Search>
-            <SearchInput type = "text" placeholder = "Search Me Guise"/>                                            
+            <SearchInput type = "text" placeholder = "Search"/>                                            
             <SearchDropdownContainer>
                 {
                 dummy.map((content, index) => {

@@ -67,8 +67,7 @@ export default ({}) => {
                 </NavForm>
             </NavComponent>
             <NavComponent>
-                <NavItem><StyledLink to = "/explore">R</StyledLink></NavItem>
-                <NavItem><StyledLink to = "/personal">O</StyledLink></NavItem>                             
+                <NavItem><StyledLink to = "/explore">EX</StyledLink></NavItem>                
                 <NavUserItem>
                     <Icon>R</Icon>
                     <UserDetails>User Details<br/>{new Date().toLocaleString()}</UserDetails>

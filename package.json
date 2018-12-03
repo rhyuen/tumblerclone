@@ -33,7 +33,6 @@
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server --open",
-    "deploy": "now ./dist --public && now alias",
-    "test": "yarn"
+    "deploy": "now ./dist --public && now alias"
   }
 }
