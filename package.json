@@ -33,6 +33,6 @@
   "scripts": {
     "start": "webpack",
     "dev": "webpack-dev-server --open",
-    "deploy": "now ./dist --public && now alias"
+    "deploy": "now ./dist --public"
   }
 }
